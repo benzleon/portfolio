@@ -1,6 +1,7 @@
 import Head from "next/head";
-import { Header } from "../components/Navigation/Navigation";
+import { Navigation } from "../components/Navigation";
 import { Hero } from "../components/Hero";
+import { About } from "../components/About";
 
 const Home = () => {
   return (
@@ -9,8 +10,9 @@ const Home = () => {
         <title>Leon Benz</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Navigation />
       <Hero />
+      <About />
     </>
   );
 };
