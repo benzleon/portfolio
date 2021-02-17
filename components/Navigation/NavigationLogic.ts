@@ -1,4 +1,4 @@
-import { useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 import useBackgroundColor from "../../helpers/useBackgroundColor";
 import useWindowSize from "../../helpers/useWindowSize";
 

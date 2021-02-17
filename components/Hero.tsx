@@ -1,13 +1,4 @@
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  Heading,
-  HStack,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Center, Heading, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { SocialButtons } from "./SocialButton";
 
