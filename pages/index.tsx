@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Navigation } from "../components/Navigation";
 import { Hero } from "../components/Hero";
 import { About } from "../components/About";
+import { Footer } from "../components/Footer";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Navigation />
       <Hero />
       <About />
+      <Footer />
     </>
   );
 };

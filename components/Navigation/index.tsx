@@ -24,7 +24,14 @@ export const Navigation = () => {
   // TODO make burger menu
   else
     return (
-      <Box pos="fixed" left={0} top={0} w="100%" bg={backgroundColor}>
+      <Box
+        pos="fixed"
+        left={0}
+        top={0}
+        w="100%"
+        bg={backgroundColor}
+        zIndex={1000}
+      >
         <HStack d="flex" float="right" m={2} spacing={8}>
           <NavButton>Home</NavButton>
           <NavButton>Über mich</NavButton>
