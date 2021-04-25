@@ -2,6 +2,7 @@ import { HStack, Icon, IconButton } from "@chakra-ui/react";
 import React from "react";
 import { ThemeTypings } from "@chakra-ui/styled-system";
 import { FaGithub, FaLinkedinIn, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 import useBackgroundColor from "../helpers/useBackgroundColor";
 
 type SocialButtonProps = {
@@ -41,6 +42,11 @@ export const SocialButtons = () => {
         account="github"
         icon={FaGithub}
         href="https://github.com/benzleon"
+      ></SocialButton>
+      <SocialButton
+        account="purple"
+        icon={AiOutlineMail}
+        href="mailto:benzleon02@gmail.com"
       ></SocialButton>
     </HStack>
   );

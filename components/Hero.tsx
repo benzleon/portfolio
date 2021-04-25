@@ -17,17 +17,16 @@ export const Hero = () => {
   const display = useBreakpointValue({ base: "block", lg: "flex" });
   const ml = useBreakpointValue({ base: "auto", lg: "20px" });
   return (
-    <Box h={wrap ? "" : "100vh"}>
+    <Box>
       <Center h="full">
-        <Box pt={pt} d={display} maxW="1000px">
-          <Center w={wrap ? "" : "50%"}>
+        <Box pt={36} maxW="1000px">
+          <Center>
             <Stack alignItems="center" m={8} spacing={8}>
               <Heading size="2xl" textAlign="center">
-                Hallo, ich bin{" "}
                 <Text d="inline" color="green.400">
                   Leon Benz
-                </Text>
-                ,<Text> Frontend Entwickler aus Deutschland.</Text>
+                </Text>{" "}
+                - Frontend Entwickler
               </Heading>
               <Text fontSize="xl" color="gray">
                 Frontend - TypeScript - React
@@ -41,9 +40,10 @@ export const Hero = () => {
             </Stack>
           </Center>
           <Image
-            maxH="400px"
-            mx={ml}
-            px={wrap ? "20px" : ""}
+            maxH="500px"
+            mx="auto"
+            px={5}
+            pt={10}
             my="auto"
             src="undraw_feeling_proud_qne1.svg"
           ></Image>
