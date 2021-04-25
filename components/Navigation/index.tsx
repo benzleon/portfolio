@@ -32,15 +32,17 @@ export const Navigation = () => {
         bg={backgroundColor}
         zIndex={1000}
       >
-        <HStack d="flex" float="right" m={2} spacing={8}>
-          <NavButton>Home</NavButton>
-          <NavButton>Über mich</NavButton>
-          <NavButton>Projekte</NavButton>
-          <NavButton>Kontakt</NavButton>
-          <Button onClick={toggleColorMode}>
-            {colorMode === "dark" ? "Light" : "Dark"} mode
-          </Button>
-        </HStack>
+        <Box maxW="800px" mx="auto">
+          <HStack d="flex" float="right" m={2} spacing={8}>
+            <NavButton>Home</NavButton>
+            <NavButton>Über mich</NavButton>
+            <NavButton>Projekte</NavButton>
+            <NavButton>Kontakt</NavButton>
+            <Button onClick={toggleColorMode}>
+              {colorMode === "dark" ? "Light" : "Dark"} mode
+            </Button>
+          </HStack>
+        </Box>
       </Box>
     );
 };

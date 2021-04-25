@@ -19,7 +19,7 @@ export const Hero = () => {
   return (
     <Box>
       <Center h="full">
-        <Box pt={36} maxW="1000px">
+        <Box pt={36} maxW="800px">
           <Center>
             <Stack alignItems="center" m={8} spacing={8}>
               <Heading size="2xl" textAlign="center">

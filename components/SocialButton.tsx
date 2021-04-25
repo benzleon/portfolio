@@ -25,7 +25,7 @@ const SocialButton = ({ account, icon, href }: SocialButtonProps) => {
       target="_blank"
       rel="noopener noreferrer"
       _hover={{
-        color: "green.500",
+        color: account + ".500",
         backgroundColor: backgroundColor,
       }}
     ></IconButton>
@@ -39,7 +39,7 @@ export const SocialButtons = () => {
       <SocialButton account="whatsapp" icon={FaWhatsapp}></SocialButton>
       <SocialButton account="linkedin" icon={FaLinkedinIn}></SocialButton>
       <SocialButton
-        account="github"
+        account="gray"
         icon={FaGithub}
         href="https://github.com/benzleon"
       ></SocialButton>
