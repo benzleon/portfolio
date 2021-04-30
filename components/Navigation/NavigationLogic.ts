@@ -6,7 +6,7 @@ export const NavigationLogic = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const backgroundColor = useBackgroundColor();
   const size = useWindowSize();
-  const burgerMenu = size.width < 535;
+  const burgerMenu = size.width < 440;
 
   return { colorMode, toggleColorMode, backgroundColor, burgerMenu };
 };

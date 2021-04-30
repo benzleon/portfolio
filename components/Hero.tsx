@@ -9,6 +9,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
+import { scroller } from "react-scroll";
 import { SocialButtons } from "./SocialButton";
 
 export const Hero = () => {
@@ -19,7 +20,7 @@ export const Hero = () => {
   return (
     <Box>
       <Center h="full">
-        <Box pt={36} maxW="800px">
+        <Box pt={20} maxW="800px" id="hero">
           <Center>
             <Stack alignItems="center" m={8} spacing={8}>
               <Heading size="2xl" textAlign="center">
@@ -33,7 +34,16 @@ export const Hero = () => {
               </Text>
               <SocialButtons />
               <Box>
-                <Button colorScheme="green" size="lg" fontSize="xl">
+                <Button
+                  colorScheme="green"
+                  size="lg"
+                  fontSize="xl"
+                  onClick={() =>
+                    scroller.scrollTo("projects", {
+                      smooth: "easeInOutQuad",
+                    })
+                  }
+                >
                   Meine Projekte
                 </Button>
               </Box>

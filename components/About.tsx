@@ -14,7 +14,7 @@ import { COLORS, TechnologyIcon } from "./TechnologyIcon";
 
 export const About = () => {
   return (
-    <Box maxW="800px" mx="auto" px={5} py={10}>
+    <Box maxW="800px" mx="auto" px={5} py={10} id="about">
       <Heading my={5}>Über Mich</Heading>
       <Text fontSize="lg">
         Hallo ich bin Leon Benz, ein selbsterlernter Frontendentwickler in der

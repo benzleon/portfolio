@@ -1,12 +1,20 @@
 import { Box, Button, HStack, Link } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import { NavigationLogic } from "./NavigationLogic";
+import { Link as ScrollLink } from "react-scroll";
 
-type NavButtonProps = { children?: ReactNode };
+type NavButtonProps = { children?: ReactNode; to: string };
 
-const NavButton = ({ children }: NavButtonProps) => {
+const NavButton = ({ children, to }: NavButtonProps) => {
   return (
-    <Link fontSize="lg" fontWeight="bold" _hover={{ color: "green.400" }}>
+    <Link
+      as={ScrollLink}
+      to={to}
+      smooth
+      fontSize="lg"
+      fontWeight="bold"
+      _hover={{ color: "green.400" }}
+    >
       {children}
     </Link>
   );
@@ -34,10 +42,10 @@ export const Navigation = () => {
       >
         <Box maxW="800px" mx="auto">
           <HStack d="flex" float="right" m={2} spacing={8}>
-            <NavButton>Home</NavButton>
-            <NavButton>Über mich</NavButton>
-            <NavButton>Projekte</NavButton>
-            <NavButton>Kontakt</NavButton>
+            <NavButton to="hero">Home</NavButton>
+            <NavButton to="about">Über mich</NavButton>
+            <NavButton to="projects">Projekte</NavButton>
+            {/* <NavButton>Kontakt</NavButton> */}
             <Button onClick={toggleColorMode}>
               {colorMode === "dark" ? "Light" : "Dark"} mode
             </Button>

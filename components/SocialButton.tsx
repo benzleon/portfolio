@@ -35,9 +35,16 @@ const SocialButton = ({ account, icon, href }: SocialButtonProps) => {
 export const SocialButtons = () => {
   return (
     <HStack>
-      <SocialButton account="twitter" icon={FaTwitter}></SocialButton>
-      <SocialButton account="whatsapp" icon={FaWhatsapp}></SocialButton>
-      <SocialButton account="linkedin" icon={FaLinkedinIn}></SocialButton>
+      <SocialButton
+        account="whatsapp"
+        icon={FaWhatsapp}
+        href="https://api.whatsapp.com/send?phone=491784935503"
+      ></SocialButton>
+      <SocialButton
+        account="linkedin"
+        icon={FaLinkedinIn}
+        href="https://www.linkedin.com/in/leon-benz-204224211/"
+      ></SocialButton>
       <SocialButton
         account="gray"
         icon={FaGithub}

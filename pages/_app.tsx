@@ -5,7 +5,13 @@ const theme = extendTheme({
   config: {
     initialColorMode: "light",
   },
-
+  styles: {
+    global: (props) => ({
+      "html, body": {
+        backgroundColor: props.colorMode === "dark" ? "gray.900" : "white",
+      },
+    }),
+  },
   colors: {
     // for color scheme: dark: 200, light: 500
     github: {
