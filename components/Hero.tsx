@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { scroller } from "react-scroll";
+import { Metaballs } from "./Metaballs";
 import { SocialButtons } from "./SocialButton";
 
 export const Hero = () => {
@@ -49,6 +50,7 @@ export const Hero = () => {
               </Box>
             </Stack>
           </Center>
+          <Metaballs />
           <Image
             maxH="500px"
             mx="auto"
