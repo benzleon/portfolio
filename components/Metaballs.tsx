@@ -23,7 +23,7 @@ export const Metaballs = ({}: MetaballsProps) => {
     const canvas = ref.current;
 
     window.requestAnimationFrame(() => {
-      draw(createBalls(8, canvas.width, canvas.height));
+      draw(createBalls(12, canvas.width, canvas.height));
     });
   }, []);
 
@@ -64,10 +64,10 @@ export const Metaballs = ({}: MetaballsProps) => {
       // ctx.moveTo(ball.x + ball.r, ball.y);
       // ctx.arc(ball.x, ball.y, ball.r, 0, 2 * Math.PI);
     });
-    const scale = 0.3;
+    const scale = 0.1;
     const map = getMap(balls, canvas.width, canvas.height, scale);
 
-    const threshold = 20;
+    const threshold = 230;
     for (let x = 0; x < map.length - 1; x++) {
       for (let y = 0; y < Math.floor(canvas.height * scale) - 1; y++) {
         const tl = map[x][y];
@@ -133,15 +133,8 @@ export const Metaballs = ({}: MetaballsProps) => {
 
   return (
     <Box w="full" d="flex" justifyContent="center">
-      <Box>
+      <Box pos="absolute" top={0} zIndex="0">
         <canvas ref={ref} width={800} height={500}></canvas>
-        <Button
-          onClick={() => {
-            reset.current = true;
-          }}
-        >
-          Reset
-        </Button>
       </Box>
     </Box>
   );
