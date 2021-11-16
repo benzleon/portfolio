@@ -14,10 +14,10 @@ import { Metaballs } from "./Metaballs";
 import { SocialButtons } from "./SocialButton";
 
 export const Hero = () => {
-  const wrap = useBreakpointValue({ base: true, lg: false });
+  /*const wrap = useBreakpointValue({ base: true, lg: false });
   const pt = useBreakpointValue({ base: 20, lg: 0 });
   const display = useBreakpointValue({ base: "block", lg: "flex" });
-  const ml = useBreakpointValue({ base: "auto", lg: "20px" });
+  const ml = useBreakpointValue({ base: "auto", lg: "20px" });*/
   return (
     <Box>
       <Center h="full">
@@ -31,7 +31,7 @@ export const Hero = () => {
                 </Text>{" "}
                 - Frontend Entwickler
               </Heading>
-              <Text zIndex="10" ontSize="xl" color="gray">
+              <Text zIndex="10" fontSize="xl" color="gray">
                 Frontend - TypeScript - React
               </Text>
               <SocialButtons />
