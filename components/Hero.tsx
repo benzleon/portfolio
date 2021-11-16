@@ -26,7 +26,7 @@ export const Hero = () => {
           <Center>
             <Stack alignItems="center" m={8} spacing={8}>
               <Heading zIndex="10" size="2xl" textAlign="center">
-                <Text zIndex="10" d="inline" color="green.400">
+                <Text d="inline" color="green.400">
                   Leon Benz
                 </Text>{" "}
                 - Frontend Entwickler

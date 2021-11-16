@@ -62,12 +62,13 @@ export const createBalls = (
 ) => {
   const circles: Ball[] = [];
   const r = maxWidth / 10;
+  const minRadius = maxWidth / 15;
 
   for (let i = 0; i < amount; i++) {
     circles.push({
       x: randomRange(r, maxWidth - r),
       y: randomRange(r, maxHeight - r),
-      r: randomRange(30, r),
+      r: randomRange(minRadius, r),
       vx: randomRange(-1, 1),
       vy: randomRange(-1, 1),
     });

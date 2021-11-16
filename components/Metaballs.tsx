@@ -36,7 +36,7 @@ export const Metaballs = ({}: MetaballsProps) => {
         reset.current = true;
       }, 100) as any as number;
     }
-  }, [dims]);
+  }, [dims.width]);
 
   const draw = (balls: Ball[]) => {
     const canvas = ref.current;
@@ -60,10 +60,10 @@ export const Metaballs = ({}: MetaballsProps) => {
     ctx.strokeStyle = gradient;
 
     ctx.beginPath();
-    balls.forEach((ball) => {
-      // ctx.moveTo(ball.x + ball.r, ball.y);
-      // ctx.arc(ball.x, ball.y, ball.r, 0, 2 * Math.PI);
-    });
+    /*balls.forEach((ball) => {
+      ctx.moveTo(ball.x + ball.r, ball.y);
+      ctx.arc(ball.x, ball.y, ball.r, 0, 2 * Math.PI);
+    });*/
     const scale = 0.1;
     const map = getMap(balls, canvas.width, canvas.height, scale);
 
@@ -112,14 +112,6 @@ export const Metaballs = ({}: MetaballsProps) => {
             ctx.moveTo(Math.round(p1.x / scale), Math.round(p1.y / scale));
             ctx.lineTo(Math.round(p2.x / scale), Math.round(p2.y / scale));
           }
-          // ctx.strokeRect(
-          //   x / scale,
-          //   y / scale,
-          //   canvas.width / map.length,
-          //   canvas.height / map[0].length
-          // );
-          // ctx.moveTo(x / scale + 1, y / scale);
-          // ctx.arc(x / scale, y / scale, 1, 0, 2 * Math.PI);
         }
       }
     }
