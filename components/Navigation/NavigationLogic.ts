@@ -10,7 +10,7 @@ export const NavigationLogic = () => {
   const [burgerMenu, setBurgerMenu] = React.useState(true);
 
   React.useEffect(() => {
-    setBurgerMenu(size.width < 480);
+    setBurgerMenu(size.width < 800);
   }, [size.width]);
 
   return { colorMode, toggleColorMode, backgroundColor, burgerMenu };
