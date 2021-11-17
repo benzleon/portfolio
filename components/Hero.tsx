@@ -52,6 +52,7 @@ export const Hero = () => {
             </Stack>
           </Center>
           <Image
+            pos="relative"
             maxH="500px"
             mx="auto"
             px={5}

@@ -16,30 +16,39 @@ export const Metaballs = ({}: MetaballsProps) => {
   const ref = React.useRef<HTMLCanvasElement>();
   const reset = React.useRef(true);
   const timeoutHandle = React.useRef<number>();
+  const [showCanvas, setShowCanvas] = React.useState(false);
 
   const dims = useWindowSize();
 
   React.useEffect(() => {
+    if (!showCanvas) return;
     const canvas = ref.current;
 
     window.requestAnimationFrame(() => {
       draw(createBalls(12, canvas.width, canvas.height));
     });
-  }, []);
+  }, [showCanvas]);
 
   React.useEffect(() => {
-    if (dims.width && dims.width < 800) {
-      if (timeoutHandle.current) clearTimeout(timeoutHandle.current);
+    if (dims.width && dims.width > 600) {
+      !showCanvas && setShowCanvas(true);
 
-      timeoutHandle.current = setTimeout(() => {
-        ref.current.width = dims.width;
-        reset.current = true;
-      }, 100) as any as number;
+      if (dims.width < 800) {
+        if (timeoutHandle.current) clearTimeout(timeoutHandle.current);
+
+        timeoutHandle.current = setTimeout(() => {
+          ref.current.width = dims.width;
+          reset.current = true;
+        }, 500) as any as number;
+      }
+    } else {
+      showCanvas && setShowCanvas(false);
     }
   }, [dims.width]);
 
   const draw = (balls: Ball[]) => {
     const canvas = ref.current;
+    if (!canvas) return;
     const ctx = canvas.getContext("2d");
 
     if (reset.current) {
@@ -50,24 +59,17 @@ export const Metaballs = ({}: MetaballsProps) => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-    // gradient.addColorStop(0, "magenta");
-    // gradient.addColorStop(0.5, "blue");
-    // gradient.addColorStop(1.0, "red");
-
     gradient.addColorStop(0, "green");
     gradient.addColorStop(0.5, "lightblue");
     gradient.addColorStop(1.0, "magenta");
     ctx.strokeStyle = gradient;
 
     ctx.beginPath();
-    /*balls.forEach((ball) => {
-      ctx.moveTo(ball.x + ball.r, ball.y);
-      ctx.arc(ball.x, ball.y, ball.r, 0, 2 * Math.PI);
-    });*/
+
     const scale = 0.1;
     const map = getMap(balls, canvas.width, canvas.height, scale);
-
     const threshold = 230;
+
     for (let x = 0; x < map.length - 1; x++) {
       for (let y = 0; y < Math.floor(canvas.height * scale) - 1; y++) {
         const tl = map[x][y];
@@ -118,14 +120,17 @@ export const Metaballs = ({}: MetaballsProps) => {
 
     ctx.closePath();
     ctx.stroke();
+
     const newBalls = updateBalls(balls, canvas.width, canvas.height);
 
     window.requestAnimationFrame(() => draw(newBalls));
   };
 
+  if (!showCanvas) return <></>;
+
   return (
     <Box w="full" d="flex" justifyContent="center">
-      <Box pos="absolute" top={0} zIndex="0">
+      <Box pos="absolute">
         <canvas ref={ref} width={800} height={500}></canvas>
       </Box>
     </Box>
