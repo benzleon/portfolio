@@ -51,24 +51,26 @@ export const Footer = () => {
                 Angaben gemäß § 5 TMG
               </Heading>
               <Text>Leon Benz</Text>
-              <Text>Musterladen</Text>
-              <Text>Musterstraße 111</Text>
-              <Text>Gebäude 44</Text>
-              <Text>90210 Musterstadt</Text>
+              <Text>Weberstraße 13</Text>
+              <Text>41844 Wegberg</Text>
               <Heading size="md" my={3}>
                 Kontakt
               </Heading>
               <Text>Telefon: +49 (0) 178 4935503</Text>
-              <Text>Telefax: +49 (0) 123 44 55 99</Text>
-              <Text>E-Mail: benzleon02@gmail.com</Text>
-              <Heading size="md" my={3}>
+              <Text>
+                E-Mail:{" "}
+                <Link href="mailto:benzleon02@gmail.com" isExternal>
+                  benzleon02@gmail.com
+                </Link>
+              </Text>
+              {/* <Heading size="md" my={3}>
                 Umsatzsteuer-ID
               </Heading>
               <Text>
                 Umsatzsteuer-Identifikationsnummer gemäß § 27 a
                 Umsatzsteuergesetz:
               </Text>
-              <Text>DE999999999</Text>
+              <Text>DE999999999</Text> */}
               <Heading size="md" my={3}>
                 Verbraucherstreitbeilegung/Universalschlichtungsstelle
               </Heading>
@@ -149,9 +151,9 @@ export const Footer = () => {
 
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
+              Schließen
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
+            {/* <Button variant="ghost">Secondary Action</Button> */}
           </ModalFooter>
         </ModalContent>
       </Modal>
