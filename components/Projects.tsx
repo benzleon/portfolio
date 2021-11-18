@@ -29,7 +29,7 @@ const Project = ({ image, title, description, year, url }: ProjectProps) => {
   return (
     <Box w="full" py={5}>
       <SimpleGrid columns={cols}>
-        <Image src={image}></Image>
+        <Image src={image} alt={title}></Image>
         <Box ml={ml} my="auto" textAlign={textAlign} py={py}>
           <Heading mb={5} size="lg">
             {title}{" "}
