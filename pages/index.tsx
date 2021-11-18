@@ -9,6 +9,9 @@ const Home = () => {
   return (
     <>
       <Head>
+        <meta name="description" content="Ich bin Leon Benz ein Programmierer / Frontend Entwickler. Dies ist mein Portfolio" />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="leon, benz, programmierer, entwickler, fullstack, react, programmer" />
         <title>Leon Benz | Frontendentwickler</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
