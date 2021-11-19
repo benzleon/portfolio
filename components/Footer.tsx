@@ -25,7 +25,7 @@ export const Footer = () => {
           <Box mb={5}>
             <SocialButtons></SocialButtons>
           </Box>
-          <Text>
+          <Text textAlign="center">
             &#169; 2021 by Leon Benz |{" "}
             <Button variant="link" onClick={onOpen}>
               Impressum, Disclaimer
