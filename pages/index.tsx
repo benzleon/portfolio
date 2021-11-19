@@ -17,7 +17,7 @@ const Home = () => {
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="leon, benz, programmierer, entwickler, fullstack, react, programmer"
+          content="leon, benz, programmierer, entwickler, fullstack, react, programmer, portfolio"
         />
         <title>Leon Benz | Frontendentwickler</title>
         <link rel="icon" href="/favicon.ico" />
