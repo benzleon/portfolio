@@ -37,6 +37,7 @@ export const Metaballs = ({}: MetaballsProps) => {
         if (timeoutHandle.current) clearTimeout(timeoutHandle.current);
 
         timeoutHandle.current = setTimeout(() => {
+          if (!ref.current) return;
           ref.current.width = dims.width;
           reset.current = true;
         }, 500) as any as number;
