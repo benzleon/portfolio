@@ -18,9 +18,9 @@ export const About = () => {
       <Heading my={5}>Über Mich</Heading>
       <Text fontSize="lg">
         Hallo ich bin Leon Benz, ein selbsterlernter Frontendentwickler in der
-        nähe von Möchengladbach. Webseiten entwickeln ist mein leidenschafliches
-        Hobby, was ich momentan noch neben dem Abitur mache. Die Technologien,
-        die ich in meinen Projekten in der Regel benutze sind:
+        Nähe von Mönchengladbach. Webseiten entwickeln ist mein
+        leidenschafliches Hobby, was ich momentan noch neben dem Abitur mache.
+        Die Technologien, die ich in meinen Projekten in der Regel benutze sind:
       </Text>
       <Box py={5}>
         <HStack pt={3}>
