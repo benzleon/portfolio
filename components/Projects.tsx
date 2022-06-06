@@ -29,7 +29,7 @@ const Project = ({ image, title, description, year, url }: ProjectProps) => {
   return (
     <Box w="full" py={5}>
       <SimpleGrid columns={cols}>
-        <Image src={image} alt={title}></Image>
+        <Image src={image} alt={title} border="1px black solid"></Image>
         <Box ml={ml} my="auto" textAlign={textAlign} py={py}>
           <Heading mb={5} size="lg">
             {title}{" "}
@@ -53,18 +53,25 @@ export const Projects = () => {
       <Heading my={5}>Projekte</Heading>
       <VStack spacing={10}>
         <Project
-          image="greenbite.png"
-          title="Greenbite"
-          description="Eine Webseite zur Inspiration zum Thema Nachhaltigkeit"
-          year="2021"
-          url="https://greenbite.vercel.app"
+          image="tracker.png"
+          title="Time Tracker"
+          description="Eine Web-Anwendung um gebrauchte Zeit auzuzeichnen"
+          year="2022"
+          url="https://tracker.leonbenz.de"
         />
         <Project
           image="securit.png"
           title="Securit"
           description="Eine Web-Anwendung um Passwörter zu verwalten"
           year="2020"
-          url="https://securit-25055.web.app"
+          url="https://securit.leonbenz.de"
+        />
+        <Project
+          image="greenbite.png"
+          title="Greenbite"
+          description="Eine Webseite zur Inspiration zum Thema Nachhaltigkeit"
+          year="2021"
+          url="https://greenbite.vercel.app"
         />
       </VStack>
     </Box>
