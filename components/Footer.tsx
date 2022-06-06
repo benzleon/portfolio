@@ -26,7 +26,7 @@ export const Footer = () => {
             <SocialButtons></SocialButtons>
           </Box>
           <Text textAlign="center">
-            &#169; 2021 by Leon Benz |{" "}
+            &#169; 2022 by Leon Benz |{" "}
             <Button variant="link" onClick={onOpen}>
               Impressum, Disclaimer
             </Button>
