@@ -6,7 +6,7 @@ import {
   SiGit,
   SiHtml5,
   SiJavascript,
-  SiNextDotJs,
+  SiNextdotjs,
   SiReact,
   SiTypescript,
 } from "react-icons/si";
@@ -39,7 +39,7 @@ export const About = () => {
           <TechnologyIcon color={COLORS.react} icon={SiReact} hover="React" />
           <TechnologyIcon
             color={COLORS.next}
-            icon={SiNextDotJs}
+            icon={SiNextdotjs}
             hover="Next.js"
           />
           <TechnologyIcon color={COLORS.git} icon={SiGit} hover="Git" />
